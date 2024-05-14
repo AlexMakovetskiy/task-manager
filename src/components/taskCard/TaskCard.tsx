@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import cn from "classnames/dedupe";
 
@@ -9,7 +10,40 @@ import { removeTask, setTaskComplete } from "../../redux/taskData/TaskDataSlice"
 import styles from "./TaskCard.module.scss";
 
 function TaskCard({ taskData }: ITaskCard) {
+	const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
 	const dispatch = useAppDispatch();
+
+	const iconSizeValueList = {
+		firstTabletValue: 20,
+		defaultValue: 30,
+	};
+
+	const deviceWidthValues = {
+		firstTabletValue: 630,
+	};
+
+	useEffect(() => {
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
+		};
+
+		handleResize();
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
+	function getIconSize() {
+		if (windowWidth <= deviceWidthValues.firstTabletValue) {
+			return iconSizeValueList.firstTabletValue;
+		}
+
+		return iconSizeValueList.defaultValue;
+	}
+
 	const handleTaskComplete = () => {
 		dispatch(setTaskComplete(taskData.id));
 	};
@@ -37,7 +71,7 @@ function TaskCard({ taskData }: ITaskCard) {
 				</div>
 			</div>
 			<button onClick={handleTaskRemove} className={styles.taskCardWrap__removeAction}>
-				<AiOutlineDelete size={30} color="#fff" />
+				<AiOutlineDelete size={getIconSize()} color="#fff" />
 			</button>
 		</div>
 	);

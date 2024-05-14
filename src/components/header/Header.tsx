@@ -42,12 +42,14 @@ function Header() {
 					onChange={(e) => setTaskName(e.target.value)}
 					className={styles.toolbarWrap__textLine}
 				/>
-				<button onClick={toggleDescriptionArea} className={styles.toolbarWrap__descriptionAreaAction}>
-					Добавить описание
-				</button>
-				<button className={styles.toolbarWrap__taskAction} onClick={handleCreateTask}>
-					Создать
-				</button>
+				<div className={styles.actionWrap}>
+					<button onClick={toggleDescriptionArea} className={styles.actionWrap__descriptionAreaAction}>
+						Добавить описание
+					</button>
+					<button className={styles.actionWrap__taskAction} onClick={handleCreateTask}>
+						Создать
+					</button>
+				</div>
 			</div>
 			{isShowDescription && (
 				<textarea

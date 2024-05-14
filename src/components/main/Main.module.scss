@@ -6,10 +6,41 @@
         gap: 10px;
         font-size: 1.8rem;
         color: var(--color-little-boy-blue);
+
+        @media (max-width: 1080px) {
+            & {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 630px) {
+            & {
+                padding-bottom: 14px;
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 430px) {
+            & {
+                padding-bottom: 12px;
+            }
+        }
     }
     .taskListWrap {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @media (max-width: 630px) {
+            & {
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            & {
+                gap: 14px;
+            }
+        }
     }
 }
