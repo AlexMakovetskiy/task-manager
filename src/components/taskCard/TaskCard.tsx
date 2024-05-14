@@ -44,10 +44,12 @@ function TaskCard({ taskData }: ITaskCard) {
 		return iconSizeValueList.defaultValue;
 	}
 
+	// function that marks tasks as completed
 	const handleTaskComplete = () => {
 		dispatch(setTaskComplete(taskData.id));
 	};
 
+	// function that deletes tasks
 	const handleTaskRemove = () => {
 		dispatch(removeTask(taskData.id));
 	};

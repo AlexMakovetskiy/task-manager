@@ -34,6 +34,7 @@ function Header() {
 
 	return (
 		<header className={styles.headerWrap}>
+			{/* Form for adding new tasks */}
 			<div className={styles.toolbarWrap}>
 				<input
 					type="text"
