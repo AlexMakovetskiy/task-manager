@@ -10,6 +10,10 @@
         background: transparent;
     }
 
+    &_completed {
+        background-color: var(--color-oxford-blue-pale);
+    }
+
     .infoWrap {
         width: 60%;
         display: flex;
@@ -31,9 +35,19 @@
 
             &__title {
                 font-size: 2rem;
+
+                &_completed {
+                    text-decoration: line-through;
+                    color: var(--color-pure-light-pale);
+                }
             }
             &__subtitle {
                 font-size: 1.6rem;
+
+                &_completed {
+                    text-decoration: line-through;
+                    color: var(--color-pure-light-pale);
+                }
             }
         }
     }
