@@ -1,0 +1,15 @@
+.mainPageWrap {
+    .statusbarWrap {
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.8rem;
+        color: var(--color-little-boy-blue);
+    }
+    .taskListWrap {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,41 @@
+.taskCardWrap {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-oxford-blue);
+    border-radius: 14px;
+
+    &__removeAction {
+        background: transparent;
+    }
+
+    .infoWrap {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+
+
+        .taskContent {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            &__title,
+            &__subtitle {
+                color: var(--color-pure-light);
+                overflow-x: ellipsis;
+            }
+
+            &__title {
+                font-size: 2rem;
+            }
+            &__subtitle {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    
+}
