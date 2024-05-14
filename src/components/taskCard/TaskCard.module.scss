@@ -1,0 +1,90 @@
+.taskCardWrap {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-oxford-blue);
+    border-radius: 14px;
+
+    &__removeAction {
+        background: transparent;
+    }
+
+    &_completed {
+        background-color: var(--color-oxford-blue-pale);
+    }
+
+    .infoWrap {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+
+        .taskContent {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            &__title,
+            &__subtitle {
+                color: var(--color-pure-light);
+                overflow-x: ellipsis;
+            }
+
+            &__title {
+                font-size: 2rem;
+
+                &_completed {
+                    text-decoration: line-through;
+                    color: var(--color-pure-light-pale);
+                }
+
+                @media (max-width: 1080px) {
+                    & {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                @media (max-width: 630px) {
+                    & {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                @media (max-width: 430px) {
+                    & {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            &__subtitle {
+                font-size: 1.6rem;
+
+                &_completed {
+                    text-decoration: line-through;
+                    color: var(--color-pure-light-pale);
+                }
+
+                @media (max-width: 1080px) {
+                    & {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                @media (max-width: 630px) {
+                    & {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                @media (max-width: 430px) {
+                    & {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+    
+}

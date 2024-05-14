@@ -1,0 +1,188 @@
+.headerWrap {
+    margin-inline: auto;
+    padding: 50px 0;
+
+    @media (max-width: 1080px) {
+        & {
+            padding: 30px 0;
+        }
+    }
+
+    @media (max-width: 630px) {
+        & {
+            padding: 20px 0;
+        }
+    }
+
+    @media (max-width: 430px) {
+        & {
+            padding: 10px 0;
+        }
+    }
+
+    &__descriptionArea {
+        padding: 14px 10px;
+        min-height: 150px;
+        width: 60%;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        color: var(--color-columbia-blue);
+        background: var(--color-oxford-blue);
+        border: transparent;
+        border-radius: 14px;
+        resize: none; 
+
+        &::placeholder {
+            color: var(--color-cool-grey);
+        }
+
+        @media (max-width: 1080px) {
+            & {
+                font-size: 1.6rem;
+                line-height: 1.8rem;
+            }
+        }
+
+        @media (max-width: 630px) {
+            & {
+                padding: 12px 8px;
+                width: 100%;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+            }
+        }
+
+        @media (max-width: 430px) {
+            & {
+                padding: 10px 6px;
+            }
+        }
+    }
+
+    .toolbarWrap {
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+
+        @media (max-width: 730px) {
+            & {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                justify-content: center;
+            }
+        }
+
+        &__textLine {
+            margin-right: 10px;
+            padding: 14px 10px;
+            width: 60%;
+            font-size: 1.8rem;
+            color: var(--color-columbia-blue);
+            background: var(--color-oxford-blue);
+            border: transparent;
+            border-radius: 14px;
+
+            &::placeholder {
+                color: var(--color-cool-grey);
+            }
+
+            @media (max-width: 1080px) {
+                & {
+                    font-size: 1.6rem;
+                }
+            }
+
+            @media (max-width: 630px) {
+                & {
+                    width: 100%;
+                    padding: 12px 8px;
+                    font-size: 1.4rem;
+                }
+            }
+
+            @media (max-width: 430px) {
+                & {
+                    padding: 10px 6px;
+                }
+            }
+        }
+
+        .actionWrap {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            @media (max-width: 730px) {
+                & {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+
+            @media (max-width: 630px) {
+                & {
+                    gap: 12px;
+                }
+            }
+
+            @media (max-width: 430px) {
+                & {
+                    gap: 10px;
+                }
+            }
+
+            &__descriptionAreaAction {
+                padding: 8px 10px;
+                font-size: 1.8rem;
+                color: var(--color-pure-light);
+                border-radius: 14px;
+                background: var(--color-battery-charged-blue);
+    
+                @media (max-width: 1080px) {
+                    & {
+                        padding: 8px;
+                        font-size: 1.6rem;
+                    }
+                }
+    
+                @media (max-width: 830px) {
+                    & {
+                        padding: 6px 4px;
+                        font-size: 1.4rem;
+                    }
+                }
+
+                @media (max-width: 630px) {
+                    & {
+                        padding: 4px 2px;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+    
+            &__taskAction {
+                padding: 10px 14px;
+                font-size: 2rem;
+                color: var(--color-pure-light);
+                border-radius: 14px;
+                background: var(--color-phlox);
+    
+                @media (max-width: 1080px) {
+                    & {
+                        padding: 8px 12px;
+                        font-size: 1.8rem;
+                    }
+                }
+
+                @media (max-width: 630px) {
+                    & {
+                        padding: 6px 10px;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
