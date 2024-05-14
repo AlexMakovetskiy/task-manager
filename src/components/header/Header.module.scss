@@ -1,0 +1,61 @@
+.headerWrap {
+    margin-inline: auto;
+    padding: 50px 0;
+
+    &__descriptionArea {
+        padding: 14px 10px;
+        min-height: 150px;
+        width: 60%;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        color: var(--color-columbia-blue);
+        background: var(--color-oxford-blue);
+        border: transparent;
+        border-radius: 14px;
+        resize: none; 
+
+        &::placeholder {
+            color: var(--color-cool-grey);
+        }
+    }
+
+    .toolbarWrap {
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+
+        &__textLine {
+            margin-right: 10px;
+            padding: 14px 10px;
+            width: 60%;
+            font-size: 1.8rem;
+            color: var(--color-columbia-blue);
+            background: var(--color-oxford-blue);
+            border: transparent;
+            border-radius: 14px;
+
+            &::placeholder {
+                color: var(--color-cool-grey);
+            }
+        }
+
+        &__descriptionAreaAction {
+            padding: 8px 10px;
+            font-size: 1.8rem;
+            color: var(--color-pure-light);
+            border-radius: 14px;
+            background: var(--color-battery-charged-blue);
+        }
+
+        &__taskAction {
+            padding: 10px 14px;
+            font-size: 2rem;
+            color: var(--color-pure-light);
+            border-radius: 14px;
+            background: var(--color-phlox);
+        }
+    }
+
+}
