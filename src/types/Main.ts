@@ -1,4 +1,4 @@
-import { filterStatuses } from "../helpers/Main";
+import { taskStatuses } from "../helpers/Main";
 
 export interface ITaskListItem {
 	id: string;
@@ -7,4 +7,4 @@ export interface ITaskListItem {
 	isCompleted: boolean;
 }
 
-export type TaskStatuses = keyof typeof filterStatuses;
+export type TaskStatuses = keyof typeof taskStatuses;
