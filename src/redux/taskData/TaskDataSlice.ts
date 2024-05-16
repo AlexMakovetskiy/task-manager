@@ -22,12 +22,14 @@ const TaskDataSlice = createSlice({
 				return taskData.id === action.payload;
 			});
 		},
-
 		removeTask: (state: ITaskDataInitialState, action: PayloadAction<string>) => {
 			state.taskList = state.taskList.filter((taskData) => action.payload !== taskData.id);
+		},
+		setTaskSequence: (state: ITaskDataInitialState, action: PayloadAction<ITaskListItem[]>) => {
+			state.taskList = action.payload;
 		},
 	},
 });
 
-export const { createTask, setTaskComplete, removeTask } = TaskDataSlice.actions;
+export const { createTask, setTaskComplete, removeTask, setTaskSequence } = TaskDataSlice.actions;
 export default TaskDataSlice.reducer;
