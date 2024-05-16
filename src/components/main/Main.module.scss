@@ -9,6 +9,7 @@
 
         @media (max-width: 1080px) {
             & {
+                flex-direction: row;
                 font-size: 1.6rem;
             }
         }
@@ -26,6 +27,7 @@
             }
         }
     }
+
     .taskListWrap {
         display: flex;
         flex-direction: column;
@@ -42,5 +44,102 @@
                 gap: 14px;
             }
         }
+    }
+
+    .headerWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+        @media (max-width: 1080px) {
+            flex-direction: column-reverse;
+            gap: 20px;
+        }
+
+        .headerContainer {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media (max-width: 1080px) {
+                width: 100%;
+            }
+
+            @media (max-width: 730px) {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            &__searchLine {
+                padding: 12px 10px;
+                width: 50%;
+                font-size: 1.6rem;
+                color: var(--color-columbia-blue);
+                background: var(--color-oxford-blue);
+                border: transparent;
+                border-radius: 14px;
+    
+                @media (max-width: 1350px) {
+                    width: 30%;
+                }
+
+                @media (max-width: 730px) {
+                    margin-top: 30px;
+                    width: 100%;
+                }
+
+                @media (max-width: 630px) {
+                    padding: 12px 8px;
+                    font-size: 1.4rem;
+                }
+    
+                @media (max-width: 430px) {
+                    padding: 10px 6px;
+                }
+            }
+    
+            .toolbarWrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 60px;
+    
+                @media (max-width: 1350px) {
+                    gap: 20px;
+                }
+
+                @media (max-width: 430px) {
+                    gap: 8px;
+                }
+    
+                .actionElement {
+                    padding: 8px 10px;
+                    min-width: 120px;
+                    font-size: 1.8rem;
+                    color: var(--color-pure-light);
+                    border-radius: 14px;
+                    background: var(--color-battery-charged-blue);
+
+                    @media (max-width: 630px) {
+                        & {
+                            padding: 4px 2px;
+                            font-size: 1.2rem;
+                        }
+                    }
+                    
+                    @media (max-width: 430px) {
+                        min-width: 80px;
+                    }
+    
+                    &_selected {
+                        background: var(--color-phlox);
+                    }
+                }
+            }
+        }
+
+
     }
 }
